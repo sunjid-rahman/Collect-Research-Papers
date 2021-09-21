@@ -33,5 +33,5 @@ if __name__ == '__main__':
     tkWindow.mainloop()
     try:
         collect_articles(search_key=search_key.get(), limit=int(limit.get()))
-    except Exception as e:
+    except:
         exit()
