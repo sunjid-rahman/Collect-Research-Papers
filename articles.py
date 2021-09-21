@@ -15,9 +15,9 @@ article_dic = {}
 
 
 def collect(driver, article_path, limit):
+    size = 0
     try:
         elements = driver.find_elements_by_tag_name("a")
-        size = 0
         for element in elements:
             try:
                 article_url = element.get_attribute("href")
@@ -31,7 +31,7 @@ def collect(driver, article_path, limit):
                             print(article_url)
                             article_dic[local_filename] = article_data
                             size += 1
-            except Exception as e:
+            except:
                 pass
     except:
         pass
